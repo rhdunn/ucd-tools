@@ -1,4 +1,31 @@
-/* Enumeration types to string.
+#!/usr/bin/python
+
+# Copyright (C) 2021 Reece H. Dunn
+#
+# This file is part of ucd-tools.
+#
+# ucd-tools is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# ucd-tools is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with ucd-tools.  If not, see <http://www.gnu.org/licenses/>.
+
+import os
+import sys
+import ucd
+
+ucd_rootdir = sys.argv[1]
+ucd_version = sys.argv[2]
+
+if __name__ == '__main__':
+	sys.stdout.write("""/* Enumeration types to string.
  *
  * Copyright (C) 2012-2018, 2021 Reece H. Dunn
  *
@@ -79,193 +106,16 @@ const char *ucd_get_script_string(ucd_script s)
 {
 	static const char *scripts[] =
 	{
-		"Adlm",
-		"Afak",
-		"Aghb",
-		"Ahom",
-		"Arab",
-		"Armi",
-		"Armn",
-		"Avst",
-		"Bali",
-		"Bamu",
-		"Bass",
-		"Batk",
-		"Beng",
-		"Bhks",
-		"Blis",
-		"Bopo",
-		"Brah",
-		"Brai",
-		"Bugi",
-		"Buhd",
-		"Cakm",
-		"Cans",
-		"Cari",
-		"Cham",
-		"Cher",
-		"Cirt",
-		"Copt",
-		"Cprt",
-		"Cyrl",
-		"Cyrs",
-		"Deva",
-		"Dogr",
-		"Dsrt",
-		"Dupl",
-		"Egyd",
-		"Egyh",
-		"Egyp",
-		"Elba",
-		"Ethi",
-		"Geok",
-		"Geor",
-		"Glag",
-		"Gong",
-		"Gonm",
-		"Goth",
-		"Gran",
-		"Grek",
-		"Gujr",
-		"Guru",
-		"Hang",
-		"Hani",
-		"Hano",
-		"Hans",
-		"Hant",
-		"Hatr",
-		"Hebr",
-		"Hira",
-		"Hluw",
-		"Hmng",
-		"Hrkt",
-		"Hung",
-		"Inds",
-		"Ital",
-		"Java",
-		"Jpan",
-		"Jurc",
-		"Kali",
-		"Kana",
-		"Khar",
-		"Khmr",
-		"Khoj",
-		"Knda",
-		"Kore",
-		"Kpel",
-		"Kthi",
-		"Lana",
-		"Laoo",
-		"Latf",
-		"Latg",
-		"Latn",
-		"Lepc",
-		"Limb",
-		"Lina",
-		"Linb",
-		"Lisu",
-		"Loma",
-		"Lyci",
-		"Lydi",
-		"Mahj",
-		"Maka",
-		"Mand",
-		"Mani",
-		"Marc",
-		"Maya",
-		"Medf",
-		"Mend",
-		"Merc",
-		"Mero",
-		"Mlym",
-		"Modi",
-		"Mong",
-		"Moon",
-		"Mroo",
-		"Mtei",
-		"Mult",
-		"Mymr",
-		"Narb",
-		"Nbat",
-		"Newa",
-		"Nkgb",
-		"Nkoo",
-		"Nshu",
-		"Ogam",
-		"Olck",
-		"Orkh",
-		"Orya",
-		"Osge",
-		"Osma",
-		"Palm",
-		"Pauc",
-		"Perm",
-		"Phag",
-		"Phli",
-		"Phlp",
-		"Phlv",
-		"Phnx",
-		"Plrd",
-		"Prti",
-		"Qaak",
-		"Rjng",
-		"Rohg",
-		"Roro",
-		"Runr",
-		"Samr",
-		"Sara",
-		"Sarb",
-		"Saur",
-		"Sgnw",
-		"Shaw",
-		"Shrd",
-		"Sidd",
-		"Sind",
-		"Sinh",
-		"Sogd",
-		"Sogo",
-		"Sora",
-		"Soyo",
-		"Sund",
-		"Sylo",
-		"Syrc",
-		"Syre",
-		"Syrj",
-		"Syrn",
-		"Tagb",
-		"Takr",
-		"Tale",
-		"Talu",
-		"Taml",
-		"Tang",
-		"Tavt",
-		"Telu",
-		"Teng",
-		"Tfng",
-		"Tglg",
-		"Thaa",
-		"Thai",
-		"Tibt",
-		"Tirh",
-		"Ugar",
-		"Vaii",
-		"Visp",
-		"Wara",
-		"Wole",
-		"Xpeo",
-		"Xsux",
-		"Yiii",
-		"Zanb",
-		"Zinh",
-		"Zmth",
-		"Zsym",
-		"Zxxx",
-		"Zyyy",
-		"Zzzz",
-
+""")
+	script_names = ucd.parse_property_mapping(ucd_rootdir, 'sc')
+	for (script, name) in sorted(script_names.items()):
+		sys.stdout.write("""		"%s",
+""" % script)
+	sys.stdout.write("""
 	};
 
 	if ((unsigned int)s >= (sizeof(scripts)/sizeof(scripts[0])))
 		return "----";
 	return scripts[(unsigned int)s];
 }
+""")
