@@ -1,4 +1,4 @@
-/* Unicode Character Database API
+/* Unicode Character Database API : Script Codes
  *
  * Copyright (C) 2012-2018, 2021 Reece H. Dunn
  *
@@ -37,7 +37,7 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Adlm, /**< @brief Adlam Script */
 	UCD_SCRIPT_Afak, /**< @brief Afaka Script */
 	UCD_SCRIPT_Aghb, /**< @brief Caucasian Albanian Script */
-	UCD_SCRIPT_Ahom, /**< @brief Tai Ahom Script */
+	UCD_SCRIPT_Ahom, /**< @brief Ahom Script */
 	UCD_SCRIPT_Arab, /**< @brief Arabic Script */
 	UCD_SCRIPT_Armi, /**< @brief Imperial Aramaic Script */
 	UCD_SCRIPT_Armn, /**< @brief Armenian Script */
@@ -55,7 +55,7 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Bugi, /**< @brief Buginese Script */
 	UCD_SCRIPT_Buhd, /**< @brief Buhid Script */
 	UCD_SCRIPT_Cakm, /**< @brief Chakma Script */
-	UCD_SCRIPT_Cans, /**< @brief Unified Canadian Aboriginal Syllabics */
+	UCD_SCRIPT_Cans, /**< @brief Canadian Aboriginal Script */
 	UCD_SCRIPT_Cari, /**< @brief Carian Script */
 	UCD_SCRIPT_Cham, /**< @brief Cham Script */
 	UCD_SCRIPT_Cher, /**< @brief Cherokee Script */
@@ -67,38 +67,38 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Deva, /**< @brief Devanagari Script */
 	UCD_SCRIPT_Dogr, /**< @brief Dogra Script */
 	UCD_SCRIPT_Dsrt, /**< @brief Deseret Script */
-	UCD_SCRIPT_Dupl, /**< @brief Duployan Shorthand Script */
-	UCD_SCRIPT_Egyd, /**< @brief Egyptian Demotic Script */
-	UCD_SCRIPT_Egyh, /**< @brief Egyptian Hieratic Script */
-	UCD_SCRIPT_Egyp, /**< @brief Egyptian Hiegoglyphs */
+	UCD_SCRIPT_Dupl, /**< @brief Duployan Script */
+	UCD_SCRIPT_Egyd, /**< @brief Egyptian demotic Script */
+	UCD_SCRIPT_Egyh, /**< @brief Egyptian hieratic Script */
+	UCD_SCRIPT_Egyp, /**< @brief Egyptian Hieroglyphs Script */
 	UCD_SCRIPT_Elba, /**< @brief Elbasan Script */
 	UCD_SCRIPT_Ethi, /**< @brief Ethiopic Script */
-	UCD_SCRIPT_Geok, /**< @brief Khutsuri Script */
-	UCD_SCRIPT_Geor, /**< @brief Geirgian Script */
+	UCD_SCRIPT_Geok, /**< @brief Khutsuri (Asomtavruli and Nuskhuri) Script */
+	UCD_SCRIPT_Geor, /**< @brief Georgian Script */
 	UCD_SCRIPT_Glag, /**< @brief Glagolitic Script */
-	UCD_SCRIPT_Gong, /**< @brief Gunjala Gondi */
-	UCD_SCRIPT_Gonm, /**< @brief Masaram Gondi */
+	UCD_SCRIPT_Gong, /**< @brief Gunjala Gondi Script */
+	UCD_SCRIPT_Gonm, /**< @brief Masaram Gondi Script */
 	UCD_SCRIPT_Goth, /**< @brief Gothic Script */
 	UCD_SCRIPT_Gran, /**< @brief Grantha Script */
 	UCD_SCRIPT_Grek, /**< @brief Greek Script */
 	UCD_SCRIPT_Gujr, /**< @brief Gujarati Script */
 	UCD_SCRIPT_Guru, /**< @brief Gurmukhi Script */
 	UCD_SCRIPT_Hang, /**< @brief Hangul Script */
-	UCD_SCRIPT_Hani, /**< @brief Han (Hanzi, Kanji, Hanja) Script */
+	UCD_SCRIPT_Hani, /**< @brief Han Script */
 	UCD_SCRIPT_Hano, /**< @brief Hanunoo Script */
-	UCD_SCRIPT_Hans, /**< @brief Han (Simplified) Script */
-	UCD_SCRIPT_Hant, /**< @brief Han (Traditional) Script */
+	UCD_SCRIPT_Hans, /**< @brief Han (Simplified variant) Script */
+	UCD_SCRIPT_Hant, /**< @brief Han (Traditional variant) Script */
 	UCD_SCRIPT_Hatr, /**< @brief Hatran Script */
 	UCD_SCRIPT_Hebr, /**< @brief Hebrew Script */
 	UCD_SCRIPT_Hira, /**< @brief Hiragana Script */
-	UCD_SCRIPT_Hluw, /**< @brief Anatolian Hieroglyphs */
+	UCD_SCRIPT_Hluw, /**< @brief Anatolian Hieroglyphs Script */
 	UCD_SCRIPT_Hmng, /**< @brief Pahawh Hmong Script */
-	UCD_SCRIPT_Hrkt, /**< @brief Japanese Syllabaries */
+	UCD_SCRIPT_Hrkt, /**< @brief Katakana Or Hiragana Script */
 	UCD_SCRIPT_Hung, /**< @brief Old Hungarian Script */
-	UCD_SCRIPT_Inds, /**< @brief Indus Script */
+	UCD_SCRIPT_Inds, /**< @brief Indus (Harappan) Script */
 	UCD_SCRIPT_Ital, /**< @brief Old Italic Script */
 	UCD_SCRIPT_Java, /**< @brief Javanese Script */
-	UCD_SCRIPT_Jpan, /**< @brief Japanese (Han + Hiragana + Katakana) Scripts */
+	UCD_SCRIPT_Jpan, /**< @brief Japanese (alias for Han + Hiragana + Katakana) Script */
 	UCD_SCRIPT_Jurc, /**< @brief Jurchen Script */
 	UCD_SCRIPT_Kali, /**< @brief Kayah Li Script */
 	UCD_SCRIPT_Kana, /**< @brief Katakana Script */
@@ -106,13 +106,13 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Khmr, /**< @brief Khmer Script */
 	UCD_SCRIPT_Khoj, /**< @brief Khojki Script */
 	UCD_SCRIPT_Knda, /**< @brief Kannada Script */
-	UCD_SCRIPT_Kore, /**< @brief Korean (Hangul + Han) Scripts */
+	UCD_SCRIPT_Kore, /**< @brief Korean (alias for Hangul + Han) Script */
 	UCD_SCRIPT_Kpel, /**< @brief Kpelle Script */
 	UCD_SCRIPT_Kthi, /**< @brief Kaithi Script */
 	UCD_SCRIPT_Lana, /**< @brief Tai Tham Script */
 	UCD_SCRIPT_Laoo, /**< @brief Lao Script */
-	UCD_SCRIPT_Latf, /**< @brief Latin Script (Fractur Variant) */
-	UCD_SCRIPT_Latg, /**< @brief Latin Script (Gaelic Variant) */
+	UCD_SCRIPT_Latf, /**< @brief Latin (Fraktur variant) Script */
+	UCD_SCRIPT_Latg, /**< @brief Latin (Gothic variant) Script */
 	UCD_SCRIPT_Latn, /**< @brief Latin Script */
 	UCD_SCRIPT_Lepc, /**< @brief Lepcha Script */
 	UCD_SCRIPT_Limb, /**< @brief Limbu Script */
@@ -127,24 +127,24 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Mand, /**< @brief Mandaic Script */
 	UCD_SCRIPT_Mani, /**< @brief Manichaean Script */
 	UCD_SCRIPT_Marc, /**< @brief Marchen Script */
-	UCD_SCRIPT_Maya, /**< @brief Mayan Hieroglyphs */
-	UCD_SCRIPT_Medf, /**< @brief Medefaidrin (Oberi Okaime) Script */
+	UCD_SCRIPT_Maya, /**< @brief Mayan hieroglyphs Script */
+	UCD_SCRIPT_Medf, /**< @brief Medefaidrin Script */
 	UCD_SCRIPT_Mend, /**< @brief Mende Kikakui Script */
 	UCD_SCRIPT_Merc, /**< @brief Meroitic Cursive Script */
-	UCD_SCRIPT_Mero, /**< @brief Meroitic Hieroglyphs */
+	UCD_SCRIPT_Mero, /**< @brief Meroitic Hieroglyphs Script */
 	UCD_SCRIPT_Mlym, /**< @brief Malayalam Script */
 	UCD_SCRIPT_Modi, /**< @brief Modi Script */
 	UCD_SCRIPT_Mong, /**< @brief Mongolian Script */
-	UCD_SCRIPT_Moon, /**< @brief Moon Script */
+	UCD_SCRIPT_Moon, /**< @brief Moon (Moon code, Moon script, Moon type) Script */
 	UCD_SCRIPT_Mroo, /**< @brief Mro Script */
-	UCD_SCRIPT_Mtei, /**< @brief Meitei Mayek Script */
+	UCD_SCRIPT_Mtei, /**< @brief Meetei Mayek Script */
 	UCD_SCRIPT_Mult, /**< @brief Multani Script */
-	UCD_SCRIPT_Mymr, /**< @brief Myanmar (Burmese) Script */
+	UCD_SCRIPT_Mymr, /**< @brief Myanmar Script */
 	UCD_SCRIPT_Narb, /**< @brief Old North Arabian Script */
 	UCD_SCRIPT_Nbat, /**< @brief Nabataean Script */
 	UCD_SCRIPT_Newa, /**< @brief Newa Script */
-	UCD_SCRIPT_Nkgb, /**< @brief Nakhi Geba Script */
-	UCD_SCRIPT_Nkoo, /**< @brief N'Ko Script */
+	UCD_SCRIPT_Nkgb, /**< @brief Naxi Geba Script */
+	UCD_SCRIPT_Nkoo, /**< @brief Nko Script */
 	UCD_SCRIPT_Nshu, /**< @brief Nushu Script */
 	UCD_SCRIPT_Ogam, /**< @brief Ogham Script */
 	UCD_SCRIPT_Olck, /**< @brief Ol Chiki Script */
@@ -154,15 +154,15 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Osma, /**< @brief Osmanya Script */
 	UCD_SCRIPT_Palm, /**< @brief Palmyrene Script */
 	UCD_SCRIPT_Pauc, /**< @brief Pau Cin Hau Script */
-	UCD_SCRIPT_Perm, /**< @brief Old Permic */
-	UCD_SCRIPT_Phag, /**< @brief Phags-Pa Script */
+	UCD_SCRIPT_Perm, /**< @brief Old Permic Script */
+	UCD_SCRIPT_Phag, /**< @brief Phags Pa Script */
 	UCD_SCRIPT_Phli, /**< @brief Inscriptional Pahlavi Script */
 	UCD_SCRIPT_Phlp, /**< @brief Psalter Pahlavi Script */
 	UCD_SCRIPT_Phlv, /**< @brief Book Pahlavi Script */
 	UCD_SCRIPT_Phnx, /**< @brief Phoenician Script */
 	UCD_SCRIPT_Plrd, /**< @brief Miao Script */
 	UCD_SCRIPT_Prti, /**< @brief Inscriptional Parthian Script */
-	UCD_SCRIPT_Qaak, /**< @brief Klingon Script (Private Use) */
+	UCD_SCRIPT_Qaak, /**< @brief Klingon (Private Use) Script */
 	UCD_SCRIPT_Rjng, /**< @brief Rejang Script */
 	UCD_SCRIPT_Rohg, /**< @brief Hanifi Rohingya Script */
 	UCD_SCRIPT_Roro, /**< @brief Rongorongo Script */
@@ -171,22 +171,22 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Sara, /**< @brief Sarati Script */
 	UCD_SCRIPT_Sarb, /**< @brief Old South Arabian Script */
 	UCD_SCRIPT_Saur, /**< @brief Saurashtra Script */
-	UCD_SCRIPT_Sgnw, /**< @brief Sign Writing */
+	UCD_SCRIPT_Sgnw, /**< @brief SignWriting Script */
 	UCD_SCRIPT_Shaw, /**< @brief Shavian Script */
 	UCD_SCRIPT_Shrd, /**< @brief Sharada Script */
 	UCD_SCRIPT_Sidd, /**< @brief Siddham Script */
-	UCD_SCRIPT_Sind, /**< @brief Sindhi Script */
+	UCD_SCRIPT_Sind, /**< @brief Khudawadi Script */
 	UCD_SCRIPT_Sinh, /**< @brief Sinhala Script */
 	UCD_SCRIPT_Sogd, /**< @brief Sogdian Script */
 	UCD_SCRIPT_Sogo, /**< @brief Old Sogdian Script */
 	UCD_SCRIPT_Sora, /**< @brief Sora Sompeng Script */
-	UCD_SCRIPT_Soyo, /**< @brief Soyombo */
+	UCD_SCRIPT_Soyo, /**< @brief Soyombo Script */
 	UCD_SCRIPT_Sund, /**< @brief Sundanese Script */
 	UCD_SCRIPT_Sylo, /**< @brief Syloti Nagri Script */
 	UCD_SCRIPT_Syrc, /**< @brief Syriac Script */
-	UCD_SCRIPT_Syre, /**< @brief Syriac Script (Estrangelo Variant) */
-	UCD_SCRIPT_Syrj, /**< @brief Syriac Script (Western Variant) */
-	UCD_SCRIPT_Syrn, /**< @brief Syriac Script (Eastern Variant) */
+	UCD_SCRIPT_Syre, /**< @brief Syriac (Estrangelo variant) Script */
+	UCD_SCRIPT_Syrj, /**< @brief Syriac (Western variant) Script */
+	UCD_SCRIPT_Syrn, /**< @brief Syriac (Eastern variant) Script */
 	UCD_SCRIPT_Tagb, /**< @brief Tagbanwa Script */
 	UCD_SCRIPT_Takr, /**< @brief Takri Script */
 	UCD_SCRIPT_Tale, /**< @brief Tai Le Script */
@@ -210,13 +210,14 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Xpeo, /**< @brief Old Persian Script */
 	UCD_SCRIPT_Xsux, /**< @brief Cuneiform Script */
 	UCD_SCRIPT_Yiii, /**< @brief Yi Script */
-	UCD_SCRIPT_Zanb, /**< @brief Zanabazar Square */
+	UCD_SCRIPT_Zanb, /**< @brief Zanabazar Square Script */
 	UCD_SCRIPT_Zinh, /**< @brief Inherited Script */
-	UCD_SCRIPT_Zmth, /**< @brief Mathematical Notation */
-	UCD_SCRIPT_Zsym, /**< @brief Symbols */
-	UCD_SCRIPT_Zxxx, /**< @brief Unwritten Documents */
-	UCD_SCRIPT_Zyyy, /**< @brief Undetermined Script */
-	UCD_SCRIPT_Zzzz, /**< @brief Uncoded Script */
+	UCD_SCRIPT_Zmth, /**< @brief Mathematical notation Script */
+	UCD_SCRIPT_Zsym, /**< @brief Symbols Script */
+	UCD_SCRIPT_Zxxx, /**< @brief Unwritten documents Script */
+	UCD_SCRIPT_Zyyy, /**< @brief Common Script */
+	UCD_SCRIPT_Zzzz, /**< @brief Unknown Script */
+
 } ucd_script;
 
 #ifdef __cplusplus
@@ -231,11 +232,10 @@ namespace ucd
 	  * @see   http://www.unicode.org/iso15924/iso15924-codes.html
 	  */
 	enum script
-	{
-		Adlm = UCD_SCRIPT_Adlm, /**< @brief Adlam Script */
+	{		Adlm = UCD_SCRIPT_Adlm, /**< @brief Adlam Script */
 		Afak = UCD_SCRIPT_Afak, /**< @brief Afaka Script */
 		Aghb = UCD_SCRIPT_Aghb, /**< @brief Caucasian Albanian Script */
-		Ahom = UCD_SCRIPT_Ahom, /**< @brief Tai Ahom Script */
+		Ahom = UCD_SCRIPT_Ahom, /**< @brief Ahom Script */
 		Arab = UCD_SCRIPT_Arab, /**< @brief Arabic Script */
 		Armi = UCD_SCRIPT_Armi, /**< @brief Imperial Aramaic Script */
 		Armn = UCD_SCRIPT_Armn, /**< @brief Armenian Script */
@@ -253,7 +253,7 @@ namespace ucd
 		Bugi = UCD_SCRIPT_Bugi, /**< @brief Buginese Script */
 		Buhd = UCD_SCRIPT_Buhd, /**< @brief Buhid Script */
 		Cakm = UCD_SCRIPT_Cakm, /**< @brief Chakma Script */
-		Cans = UCD_SCRIPT_Cans, /**< @brief Unified Canadian Aboriginal Syllabics */
+		Cans = UCD_SCRIPT_Cans, /**< @brief Canadian Aboriginal Script */
 		Cari = UCD_SCRIPT_Cari, /**< @brief Carian Script */
 		Cham = UCD_SCRIPT_Cham, /**< @brief Cham Script */
 		Cher = UCD_SCRIPT_Cher, /**< @brief Cherokee Script */
@@ -265,38 +265,38 @@ namespace ucd
 		Deva = UCD_SCRIPT_Deva, /**< @brief Devanagari Script */
 		Dogr = UCD_SCRIPT_Dogr, /**< @brief Dogra Script */
 		Dsrt = UCD_SCRIPT_Dsrt, /**< @brief Deseret Script */
-		Dupl = UCD_SCRIPT_Dupl, /**< @brief Duployan Shorthand Script */
-		Egyd = UCD_SCRIPT_Egyd, /**< @brief Egyptian Demotic Script */
-		Egyh = UCD_SCRIPT_Egyh, /**< @brief Egyptian Hieratic Script */
-		Egyp = UCD_SCRIPT_Egyp, /**< @brief Egyptian Hiegoglyphs */
+		Dupl = UCD_SCRIPT_Dupl, /**< @brief Duployan Script */
+		Egyd = UCD_SCRIPT_Egyd, /**< @brief Egyptian demotic Script */
+		Egyh = UCD_SCRIPT_Egyh, /**< @brief Egyptian hieratic Script */
+		Egyp = UCD_SCRIPT_Egyp, /**< @brief Egyptian Hieroglyphs Script */
 		Elba = UCD_SCRIPT_Elba, /**< @brief Elbasan Script */
 		Ethi = UCD_SCRIPT_Ethi, /**< @brief Ethiopic Script */
-		Geok = UCD_SCRIPT_Geok, /**< @brief Khutsuri Script */
-		Geor = UCD_SCRIPT_Geor, /**< @brief Geirgian Script */
+		Geok = UCD_SCRIPT_Geok, /**< @brief Khutsuri (Asomtavruli and Nuskhuri) Script */
+		Geor = UCD_SCRIPT_Geor, /**< @brief Georgian Script */
 		Glag = UCD_SCRIPT_Glag, /**< @brief Glagolitic Script */
-		Gong = UCD_SCRIPT_Gong, /**< @brief Gunjala Gondi */
-		Gonm = UCD_SCRIPT_Gonm, /**< @brief Masaram Gondi */
+		Gong = UCD_SCRIPT_Gong, /**< @brief Gunjala Gondi Script */
+		Gonm = UCD_SCRIPT_Gonm, /**< @brief Masaram Gondi Script */
 		Goth = UCD_SCRIPT_Goth, /**< @brief Gothic Script */
 		Gran = UCD_SCRIPT_Gran, /**< @brief Grantha Script */
 		Grek = UCD_SCRIPT_Grek, /**< @brief Greek Script */
 		Gujr = UCD_SCRIPT_Gujr, /**< @brief Gujarati Script */
 		Guru = UCD_SCRIPT_Guru, /**< @brief Gurmukhi Script */
 		Hang = UCD_SCRIPT_Hang, /**< @brief Hangul Script */
-		Hani = UCD_SCRIPT_Hani, /**< @brief Han (Hanzi, Kanji, Hanja) Script */
+		Hani = UCD_SCRIPT_Hani, /**< @brief Han Script */
 		Hano = UCD_SCRIPT_Hano, /**< @brief Hanunoo Script */
-		Hans = UCD_SCRIPT_Hans, /**< @brief Han (Simplified) Script */
-		Hant = UCD_SCRIPT_Hant, /**< @brief Han (Traditional) Script */
+		Hans = UCD_SCRIPT_Hans, /**< @brief Han (Simplified variant) Script */
+		Hant = UCD_SCRIPT_Hant, /**< @brief Han (Traditional variant) Script */
 		Hatr = UCD_SCRIPT_Hatr, /**< @brief Hatran Script */
 		Hebr = UCD_SCRIPT_Hebr, /**< @brief Hebrew Script */
 		Hira = UCD_SCRIPT_Hira, /**< @brief Hiragana Script */
-		Hluw = UCD_SCRIPT_Hluw, /**< @brief Anatolian Hieroglyphs */
+		Hluw = UCD_SCRIPT_Hluw, /**< @brief Anatolian Hieroglyphs Script */
 		Hmng = UCD_SCRIPT_Hmng, /**< @brief Pahawh Hmong Script */
-		Hrkt = UCD_SCRIPT_Hrkt, /**< @brief Japanese Syllabaries */
+		Hrkt = UCD_SCRIPT_Hrkt, /**< @brief Katakana Or Hiragana Script */
 		Hung = UCD_SCRIPT_Hung, /**< @brief Old Hungarian Script */
-		Inds = UCD_SCRIPT_Inds, /**< @brief Indus Script */
+		Inds = UCD_SCRIPT_Inds, /**< @brief Indus (Harappan) Script */
 		Ital = UCD_SCRIPT_Ital, /**< @brief Old Italic Script */
 		Java = UCD_SCRIPT_Java, /**< @brief Javanese Script */
-		Jpan = UCD_SCRIPT_Jpan, /**< @brief Japanese (Han + Hiragana + Katakana) Scripts */
+		Jpan = UCD_SCRIPT_Jpan, /**< @brief Japanese (alias for Han + Hiragana + Katakana) Script */
 		Jurc = UCD_SCRIPT_Jurc, /**< @brief Jurchen Script */
 		Kali = UCD_SCRIPT_Kali, /**< @brief Kayah Li Script */
 		Kana = UCD_SCRIPT_Kana, /**< @brief Katakana Script */
@@ -304,13 +304,13 @@ namespace ucd
 		Khmr = UCD_SCRIPT_Khmr, /**< @brief Khmer Script */
 		Khoj = UCD_SCRIPT_Khoj, /**< @brief Khojki Script */
 		Knda = UCD_SCRIPT_Knda, /**< @brief Kannada Script */
-		Kore = UCD_SCRIPT_Kore, /**< @brief Korean (Hangul + Han) Scripts */
+		Kore = UCD_SCRIPT_Kore, /**< @brief Korean (alias for Hangul + Han) Script */
 		Kpel = UCD_SCRIPT_Kpel, /**< @brief Kpelle Script */
 		Kthi = UCD_SCRIPT_Kthi, /**< @brief Kaithi Script */
 		Lana = UCD_SCRIPT_Lana, /**< @brief Tai Tham Script */
 		Laoo = UCD_SCRIPT_Laoo, /**< @brief Lao Script */
-		Latf = UCD_SCRIPT_Latf, /**< @brief Latin Script (Fractur Variant) */
-		Latg = UCD_SCRIPT_Latg, /**< @brief Latin Script (Gaelic Variant) */
+		Latf = UCD_SCRIPT_Latf, /**< @brief Latin (Fraktur variant) Script */
+		Latg = UCD_SCRIPT_Latg, /**< @brief Latin (Gothic variant) Script */
 		Latn = UCD_SCRIPT_Latn, /**< @brief Latin Script */
 		Lepc = UCD_SCRIPT_Lepc, /**< @brief Lepcha Script */
 		Limb = UCD_SCRIPT_Limb, /**< @brief Limbu Script */
@@ -321,28 +321,28 @@ namespace ucd
 		Lyci = UCD_SCRIPT_Lyci, /**< @brief Lycian Script */
 		Lydi = UCD_SCRIPT_Lydi, /**< @brief Lydian Script */
 		Mahj = UCD_SCRIPT_Mahj, /**< @brief Mahajani Script */
-		Maka = UCD_SCRIPT_Maka, /**< @brief Mahajani Script */
+		Maka = UCD_SCRIPT_Maka, /**< @brief Makasar Script */
 		Mand = UCD_SCRIPT_Mand, /**< @brief Mandaic Script */
 		Mani = UCD_SCRIPT_Mani, /**< @brief Manichaean Script */
 		Marc = UCD_SCRIPT_Marc, /**< @brief Marchen Script */
-		Maya = UCD_SCRIPT_Maya, /**< @brief Mayan Hieroglyphs */
-		Medf = UCD_SCRIPT_Medf, /**< @brief Medefaidrin (Oberi Okaime) Script */
+		Maya = UCD_SCRIPT_Maya, /**< @brief Mayan hieroglyphs Script */
+		Medf = UCD_SCRIPT_Medf, /**< @brief Medefaidrin Script */
 		Mend = UCD_SCRIPT_Mend, /**< @brief Mende Kikakui Script */
 		Merc = UCD_SCRIPT_Merc, /**< @brief Meroitic Cursive Script */
-		Mero = UCD_SCRIPT_Mero, /**< @brief Meroitic Hieroglyphs */
+		Mero = UCD_SCRIPT_Mero, /**< @brief Meroitic Hieroglyphs Script */
 		Mlym = UCD_SCRIPT_Mlym, /**< @brief Malayalam Script */
 		Modi = UCD_SCRIPT_Modi, /**< @brief Modi Script */
 		Mong = UCD_SCRIPT_Mong, /**< @brief Mongolian Script */
-		Moon = UCD_SCRIPT_Moon, /**< @brief Moon Script */
+		Moon = UCD_SCRIPT_Moon, /**< @brief Moon (Moon code, Moon script, Moon type) Script */
 		Mroo = UCD_SCRIPT_Mroo, /**< @brief Mro Script */
-		Mtei = UCD_SCRIPT_Mtei, /**< @brief Meitei Mayek Script */
+		Mtei = UCD_SCRIPT_Mtei, /**< @brief Meetei Mayek Script */
 		Mult = UCD_SCRIPT_Mult, /**< @brief Multani Script */
-		Mymr = UCD_SCRIPT_Mymr, /**< @brief Myanmar (Burmese) Script */
+		Mymr = UCD_SCRIPT_Mymr, /**< @brief Myanmar Script */
 		Narb = UCD_SCRIPT_Narb, /**< @brief Old North Arabian Script */
 		Nbat = UCD_SCRIPT_Nbat, /**< @brief Nabataean Script */
 		Newa = UCD_SCRIPT_Newa, /**< @brief Newa Script */
-		Nkgb = UCD_SCRIPT_Nkgb, /**< @brief Nakhi Geba Script */
-		Nkoo = UCD_SCRIPT_Nkoo, /**< @brief N'Ko Script */
+		Nkgb = UCD_SCRIPT_Nkgb, /**< @brief Naxi Geba Script */
+		Nkoo = UCD_SCRIPT_Nkoo, /**< @brief Nko Script */
 		Nshu = UCD_SCRIPT_Nshu, /**< @brief Nushu Script */
 		Ogam = UCD_SCRIPT_Ogam, /**< @brief Ogham Script */
 		Olck = UCD_SCRIPT_Olck, /**< @brief Ol Chiki Script */
@@ -352,15 +352,15 @@ namespace ucd
 		Osma = UCD_SCRIPT_Osma, /**< @brief Osmanya Script */
 		Palm = UCD_SCRIPT_Palm, /**< @brief Palmyrene Script */
 		Pauc = UCD_SCRIPT_Pauc, /**< @brief Pau Cin Hau Script */
-		Perm = UCD_SCRIPT_Perm, /**< @brief Old Permic */
-		Phag = UCD_SCRIPT_Phag, /**< @brief Phags-Pa Script */
+		Perm = UCD_SCRIPT_Perm, /**< @brief Old Permic Script */
+		Phag = UCD_SCRIPT_Phag, /**< @brief Phags Pa Script */
 		Phli = UCD_SCRIPT_Phli, /**< @brief Inscriptional Pahlavi Script */
 		Phlp = UCD_SCRIPT_Phlp, /**< @brief Psalter Pahlavi Script */
 		Phlv = UCD_SCRIPT_Phlv, /**< @brief Book Pahlavi Script */
 		Phnx = UCD_SCRIPT_Phnx, /**< @brief Phoenician Script */
 		Plrd = UCD_SCRIPT_Plrd, /**< @brief Miao Script */
 		Prti = UCD_SCRIPT_Prti, /**< @brief Inscriptional Parthian Script */
-		Qaak = UCD_SCRIPT_Qaak, /**< @brief Klingon Script (Private Use) */
+		Qaak = UCD_SCRIPT_Qaak, /**< @brief Klingon (Private Use) Script */
 		Rjng = UCD_SCRIPT_Rjng, /**< @brief Rejang Script */
 		Rohg = UCD_SCRIPT_Rohg, /**< @brief Hanifi Rohingya Script */
 		Roro = UCD_SCRIPT_Roro, /**< @brief Rongorongo Script */
@@ -369,22 +369,22 @@ namespace ucd
 		Sara = UCD_SCRIPT_Sara, /**< @brief Sarati Script */
 		Sarb = UCD_SCRIPT_Sarb, /**< @brief Old South Arabian Script */
 		Saur = UCD_SCRIPT_Saur, /**< @brief Saurashtra Script */
-		Sgnw = UCD_SCRIPT_Sgnw, /**< @brief Sign Writing */
+		Sgnw = UCD_SCRIPT_Sgnw, /**< @brief SignWriting Script */
 		Shaw = UCD_SCRIPT_Shaw, /**< @brief Shavian Script */
 		Shrd = UCD_SCRIPT_Shrd, /**< @brief Sharada Script */
 		Sidd = UCD_SCRIPT_Sidd, /**< @brief Siddham Script */
-		Sind = UCD_SCRIPT_Sind, /**< @brief Sindhi Script */
+		Sind = UCD_SCRIPT_Sind, /**< @brief Khudawadi Script */
 		Sinh = UCD_SCRIPT_Sinh, /**< @brief Sinhala Script */
 		Sogd = UCD_SCRIPT_Sogd, /**< @brief Sogdian Script */
 		Sogo = UCD_SCRIPT_Sogo, /**< @brief Old Sogdian Script */
 		Sora = UCD_SCRIPT_Sora, /**< @brief Sora Sompeng Script */
-		Soyo = UCD_SCRIPT_Soyo, /**< @brief Soyombo */
+		Soyo = UCD_SCRIPT_Soyo, /**< @brief Soyombo Script */
 		Sund = UCD_SCRIPT_Sund, /**< @brief Sundanese Script */
 		Sylo = UCD_SCRIPT_Sylo, /**< @brief Syloti Nagri Script */
 		Syrc = UCD_SCRIPT_Syrc, /**< @brief Syriac Script */
-		Syre = UCD_SCRIPT_Syre, /**< @brief Syriac Script (Estrangelo Variant) */
-		Syrj = UCD_SCRIPT_Syrj, /**< @brief Syriac Script (Western Variant) */
-		Syrn = UCD_SCRIPT_Syrn, /**< @brief Syriac Script (Eastern Variant) */
+		Syre = UCD_SCRIPT_Syre, /**< @brief Syriac (Estrangelo variant) Script */
+		Syrj = UCD_SCRIPT_Syrj, /**< @brief Syriac (Western variant) Script */
+		Syrn = UCD_SCRIPT_Syrn, /**< @brief Syriac (Eastern variant) Script */
 		Tagb = UCD_SCRIPT_Tagb, /**< @brief Tagbanwa Script */
 		Takr = UCD_SCRIPT_Takr, /**< @brief Takri Script */
 		Tale = UCD_SCRIPT_Tale, /**< @brief Tai Le Script */
@@ -408,13 +408,14 @@ namespace ucd
 		Xpeo = UCD_SCRIPT_Xpeo, /**< @brief Old Persian Script */
 		Xsux = UCD_SCRIPT_Xsux, /**< @brief Cuneiform Script */
 		Yiii = UCD_SCRIPT_Yiii, /**< @brief Yi Script */
-		Zanb = UCD_SCRIPT_Zanb, /**< @brief Zanabazar Square */
+		Zanb = UCD_SCRIPT_Zanb, /**< @brief Zanabazar Square Script */
 		Zinh = UCD_SCRIPT_Zinh, /**< @brief Inherited Script */
-		Zmth = UCD_SCRIPT_Zmth, /**< @brief Mathematical Notation */
-		Zsym = UCD_SCRIPT_Zsym, /**< @brief Symbols */
-		Zxxx = UCD_SCRIPT_Zxxx, /**< @brief Unwritten Documents */
-		Zyyy = UCD_SCRIPT_Zyyy, /**< @brief Undetermined Script */
-		Zzzz = UCD_SCRIPT_Zzzz, /**< @brief Uncoded Script */
+		Zmth = UCD_SCRIPT_Zmth, /**< @brief Mathematical notation Script */
+		Zsym = UCD_SCRIPT_Zsym, /**< @brief Symbols Script */
+		Zxxx = UCD_SCRIPT_Zxxx, /**< @brief Unwritten documents Script */
+		Zyyy = UCD_SCRIPT_Zyyy, /**< @brief Common Script */
+		Zzzz = UCD_SCRIPT_Zzzz, /**< @brief Unknown Script */
+
 	};
 }
 #endif

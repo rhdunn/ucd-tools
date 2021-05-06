@@ -116,6 +116,7 @@ ucd-update: tools/case.py tools/categories.py tools/scripts.py
 	tools/case.py ${UCD_ROOTDIR} ${UCD_VERSION} ${UCD_FLAGS} > src/case.c
 	tools/categories.py ${UCD_ROOTDIR} ${UCD_VERSION} ${UCD_FLAGS} > src/categories.c
 	tools/scripts.py ${UCD_ROOTDIR} ${UCD_VERSION} ${UCD_FLAGS} > src/scripts.c
+	tools/script_header.py ${UCD_ROOTDIR} ${UCD_VERSION} ${UCD_FLAGS} > src/include/ucd/script.h
 
 libucd_includedir = $(includedir)/ucd
 libucd_include_HEADERS = \
