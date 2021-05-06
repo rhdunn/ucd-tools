@@ -1,0 +1,60 @@
+# ExtraPropertyValues.txt
+# Date: 2021-05-06, 07:59:00 GMT
+# Copyright (C) 2021 Reece H. Dunn
+#
+# This is an extension to the Unicode Character Database PropertyValueAliases.txt
+# file. It provides the data for the script codes from
+# http://www.unicode.org/iso15924/iso15924-codes.html that are not part of
+# Unicode -- i.e. they are not listed in the sc property values.
+#
+# This file uses the same format as the PropertyValueAliases.txt file.
+#
+# This data is licensed under the same terms as the Unicode Character
+# Database.
+#
+# Unicode and the Unicode Logo are registered trademarks of Unicode, Inc. in
+# the U.S. and other countries.
+# For terms of use, see http://www.unicode.org/terms_of_use.html
+#
+# Unicode Character Database
+#   For documentation, see http://www.unicode.org/reports/tr44/
+
+# ================================================
+
+# Script (sc)
+
+sc ; Afak                             ; Afaka
+sc ; Blis                             ; Blissymbols
+sc ; Cirt                             ; Cirth
+sc ; Cyrs                             ; Cyrillic (Old Church Slavonic variant)
+sc ; Egyd                             ; Egyptian demotic
+sc ; Egyh                             ; Egyptian hieratic
+sc ; Geok                             ; Khutsuri (Asomtavruli and Nuskhuri)
+sc ; Hans                             ; Han (Simplified variant)
+sc ; Hant                             ; Han (Traditional variant)
+sc ; Inds                             ; Indus (Harappan)
+sc ; Jpan                             ; Japanese (alias for Han + Hiragana + Katakana)
+sc ; Jurc                             ; Jurchen
+sc ; Kore                             ; Korean (alias for Hangul + Han)
+sc ; Kpel                             ; Kpelle
+sc ; Latf                             ; Latin (Fraktur variant)
+sc ; Latg                             ; Latin (Gothic variant)
+sc ; Loma                             ; Loma
+sc ; Maya                             ; Mayan hieroglyphs
+sc ; Moon                             ; Moon (Moon code, Moon script, Moon type)
+sc ; Nkgb                             ; Naxi Geba
+sc ; Phlv                             ; Book Pahlavi
+sc ; Qaak                             ; Klingon (Private Use)
+sc ; Roro                             ; Rongorongo
+sc ; Sara                             ; Sarati
+sc ; Syre                             ; Syriac (Estrangelo variant)
+sc ; Syrj                             ; Syriac (Western variant)
+sc ; Syrn                             ; Syriac (Eastern variant)
+sc ; Teng                             ; Tengwar
+sc ; Visp                             ; Visible Speech
+sc ; Wole                             ; Woleai
+sc ; Zmth                             ; Mathematical notation
+sc ; Zsym                             ; Symbols
+sc ; Zxxx                             ; Unwritten documents
+
+# EOF

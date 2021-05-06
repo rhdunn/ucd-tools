@@ -121,6 +121,12 @@ data_items = {
 		('Range', codepoint),
 		('Property', string),
 	],
+	'ExtraPropertyValues': [
+		('Property', string),
+		('Key', string),
+		('Value', string),
+		('Aliases', strlist),
+	],
 	'PropList': [
 		('Range', codepoint),
 		('Property', string),
@@ -186,12 +192,13 @@ def parse_ucd_data(ucd_rootdir, dataset):
 
 def parse_property_mapping(ucd_rootdir, propname, reverse=False):
 	ret = {}
-	for data in parse_ucd_data(ucd_rootdir, 'PropertyValueAliases'):
-		if data['Property'] == propname:
-			if reverse:
-				ret[data['Value']] = data['Key']
-			else:
-				ret[data['Key']] = data['Value']
+	for (rootdir, dataset) in [(ucd_rootdir, 'PropertyValueAliases'), (os.path.join(ucd_rootdir, '..'), 'ExtraPropertyValues')]:
+		for data in parse_ucd_data(rootdir, dataset):
+			if data['Property'] == propname:
+				if reverse:
+					ret[data['Value']] = data['Key']
+				else:
+					ret[data['Key']] = data['Value']
 	return ret
 
 if __name__ == '__main__':
