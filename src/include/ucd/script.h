@@ -72,6 +72,7 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Egyh, /**< @brief Egyptian hieratic Script */
 	UCD_SCRIPT_Egyp, /**< @brief Egyptian Hieroglyphs Script */
 	UCD_SCRIPT_Elba, /**< @brief Elbasan Script */
+	UCD_SCRIPT_Elym, /**< @brief Elymaic Script */
 	UCD_SCRIPT_Ethi, /**< @brief Ethiopic Script */
 	UCD_SCRIPT_Geok, /**< @brief Khutsuri (Asomtavruli and Nuskhuri) Script */
 	UCD_SCRIPT_Geor, /**< @brief Georgian Script */
@@ -93,6 +94,7 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Hira, /**< @brief Hiragana Script */
 	UCD_SCRIPT_Hluw, /**< @brief Anatolian Hieroglyphs Script */
 	UCD_SCRIPT_Hmng, /**< @brief Pahawh Hmong Script */
+	UCD_SCRIPT_Hmnp, /**< @brief Nyiakeng Puachue Hmong Script */
 	UCD_SCRIPT_Hrkt, /**< @brief Katakana Or Hiragana Script */
 	UCD_SCRIPT_Hung, /**< @brief Old Hungarian Script */
 	UCD_SCRIPT_Inds, /**< @brief Indus (Harappan) Script */
@@ -140,6 +142,7 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Mtei, /**< @brief Meetei Mayek Script */
 	UCD_SCRIPT_Mult, /**< @brief Multani Script */
 	UCD_SCRIPT_Mymr, /**< @brief Myanmar Script */
+	UCD_SCRIPT_Nand, /**< @brief Nandinagari Script */
 	UCD_SCRIPT_Narb, /**< @brief Old North Arabian Script */
 	UCD_SCRIPT_Nbat, /**< @brief Nabataean Script */
 	UCD_SCRIPT_Newa, /**< @brief Newa Script */
@@ -206,6 +209,7 @@ typedef enum ucd_script_
 	UCD_SCRIPT_Vaii, /**< @brief Vai Script */
 	UCD_SCRIPT_Visp, /**< @brief Visible Speech Script */
 	UCD_SCRIPT_Wara, /**< @brief Warang Citi Script */
+	UCD_SCRIPT_Wcho, /**< @brief Wancho Script */
 	UCD_SCRIPT_Wole, /**< @brief Woleai Script */
 	UCD_SCRIPT_Xpeo, /**< @brief Old Persian Script */
 	UCD_SCRIPT_Xsux, /**< @brief Cuneiform Script */
@@ -270,6 +274,7 @@ namespace ucd
 		Egyh = UCD_SCRIPT_Egyh, /**< @brief Egyptian hieratic Script */
 		Egyp = UCD_SCRIPT_Egyp, /**< @brief Egyptian Hieroglyphs Script */
 		Elba = UCD_SCRIPT_Elba, /**< @brief Elbasan Script */
+		Elym = UCD_SCRIPT_Elym, /**< @brief Elymaic Script */
 		Ethi = UCD_SCRIPT_Ethi, /**< @brief Ethiopic Script */
 		Geok = UCD_SCRIPT_Geok, /**< @brief Khutsuri (Asomtavruli and Nuskhuri) Script */
 		Geor = UCD_SCRIPT_Geor, /**< @brief Georgian Script */
@@ -291,6 +296,7 @@ namespace ucd
 		Hira = UCD_SCRIPT_Hira, /**< @brief Hiragana Script */
 		Hluw = UCD_SCRIPT_Hluw, /**< @brief Anatolian Hieroglyphs Script */
 		Hmng = UCD_SCRIPT_Hmng, /**< @brief Pahawh Hmong Script */
+		Hmnp = UCD_SCRIPT_Hmnp, /**< @brief Nyiakeng Puachue Hmong Script */
 		Hrkt = UCD_SCRIPT_Hrkt, /**< @brief Katakana Or Hiragana Script */
 		Hung = UCD_SCRIPT_Hung, /**< @brief Old Hungarian Script */
 		Inds = UCD_SCRIPT_Inds, /**< @brief Indus (Harappan) Script */
@@ -338,6 +344,7 @@ namespace ucd
 		Mtei = UCD_SCRIPT_Mtei, /**< @brief Meetei Mayek Script */
 		Mult = UCD_SCRIPT_Mult, /**< @brief Multani Script */
 		Mymr = UCD_SCRIPT_Mymr, /**< @brief Myanmar Script */
+		Nand = UCD_SCRIPT_Nand, /**< @brief Nandinagari Script */
 		Narb = UCD_SCRIPT_Narb, /**< @brief Old North Arabian Script */
 		Nbat = UCD_SCRIPT_Nbat, /**< @brief Nabataean Script */
 		Newa = UCD_SCRIPT_Newa, /**< @brief Newa Script */
@@ -404,6 +411,7 @@ namespace ucd
 		Vaii = UCD_SCRIPT_Vaii, /**< @brief Vai Script */
 		Visp = UCD_SCRIPT_Visp, /**< @brief Visible Speech Script */
 		Wara = UCD_SCRIPT_Wara, /**< @brief Warang Citi Script */
+		Wcho = UCD_SCRIPT_Wcho, /**< @brief Wancho Script */
 		Wole = UCD_SCRIPT_Wole, /**< @brief Woleai Script */
 		Xpeo = UCD_SCRIPT_Xpeo, /**< @brief Old Persian Script */
 		Xsux = UCD_SCRIPT_Xsux, /**< @brief Cuneiform Script */
