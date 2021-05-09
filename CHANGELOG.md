@@ -1,5 +1,10 @@
 # Change Log
 
+## 12.0.0 - 2021-05-09
+
+*  Update to Unicode Character Data 12.0.0.
+*  Update to Unicode Emoji 12.0.
+
 ## 11.0.0.1 - 2021-05-04
 
 *  Fix -fsanitize=address issues in case.c.
